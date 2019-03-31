@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Friendos Dictionary</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Friendos Dictionary</h1>
+      <h2>The official dictionary of the Friendos</h2>
+    </header>
+
+
+
+    <main>
+      <div id="dict" class="content">
+        <section class="word_container">
+          <div class="entry" v-for="item in items">
+            <h2>{{item.word}}</h2>
+            <h3>{{item.user}}</h3>
+            <p>{{item.definition}}</p>
+            <div class="buttons">
+              <button @click="deleteItem(item)">Delete</button>
+            </div>
+          </div>
+      </div>
+      <div id="input">
+        <h2>Add New Entry</h2>
+        <p>When adding to the dictionary be sure to include who uses this phrase or word and the most acccurate definition that you can provide</p>
+        <input v-model="word" placeholder="Word/Phrase">
+        <p></p>
+        <input v-model="user" placeholder="User">
+        <p></p>
+        <input v-model="definition" placeholder="Definition">
+        <p></p>
+        <button @click="add">Add</button>
+      </div>
+    </main>
+
+    <footer>
+        <p>My github link</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  background: silver;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background: gray;
+  height: 100%;
+}
+
+.entry{
+  padding: 20px;
+  background: gray;
+  margin: 15px;
+}
+
+#input {
+  background: gray;
+  padding: 20px;
+  margin: 15px;
+}
+
+footer {
+  text-align: center;
+  background: white;
+  height: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
